@@ -1,11 +1,11 @@
-def bin_dec(k):
+def bin_dec(k): #converts decimal to binary
   n=int(k)
   num=''
   while n!=0:
     num+=str(n%2)
     n=n//2
   return num[::-1]
-def reg_read(reg):
+def reg_read(reg): #returns 
   rins=bin_dec(reg[1])
   return '0'*(3-len(rins))+rins
 A={'add':'10000','sub':'10001','mul':'10110','EXOR':'11010','AND':'11100','OR':'11011'}
