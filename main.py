@@ -146,6 +146,7 @@ inptmp=[i.split() for i in sys.stdin.readlines()]
 #         break
 inp = []
 for i in inptmp:
+  try:
     if i != []:
         if i[0] == 'var':
             if len(inp) != 0 and inp[-1][0] != 'var':
@@ -169,6 +170,9 @@ for i in inptmp:
                 quit()
         else:
             inp.append(i)
+  except:
+    print(Errors[2])
+    quit()
 if len(inp)>256 or len(vars)>256:
     print(Errors[2])
     quit()
